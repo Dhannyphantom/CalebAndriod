@@ -17,14 +17,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Home");
+        setTitle("My Todo List");
     }
 
-    public void handleReply (View view) {
-        Button button = findViewById(view.getId());
-        Intent intent = new Intent(this, ComposeMessageActivity.class);
-        intent.putExtra("username", button.getText().toString().substring(5));
-        startActivity(intent);
+    public void handleAddItem (View view) {
+        EditText inputItem = findViewById(R.id.ivName);
+
+        Log.d("myLog", inputItem.getText().toString());
     }
 
 
